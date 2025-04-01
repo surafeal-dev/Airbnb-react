@@ -2,106 +2,114 @@
 
 ## Overview
 
-This project is a full-stack web application developed as a clone of Airbnb using the MERN stack (MongoDB, Express.js, React.js, Node.js). It aims to replicate the core functionality of Airbnb, allowing users to search for accommodations, view details, make bookings, and manage their listings.
+This is a full-stack Airbnb clone built by **Surafeal-Dev** using the MERN stack (MongoDB, Express.js, React.js, Node.js). The application replicates Airbnb's core functionalities, allowing users to search for accommodations, view property details, make bookings, and manage their listings.
 
 ## Getting Started
 
-1. **Clone the Repository:**
+### 1. Clone the Repository
 
-   ```bash
-   git clone https://github.com/rahul4019/airbnb-clone.git
+```bash
+git clone https://github.com/surafeal-dev/Airbnb-react.git
+```
 
-   ```
+### 2. Install Dependencies
 
-2. **Install dependencies:**
+#### Frontend
+Navigate to the client directory and install frontend dependencies:
 
-   Navigate to client directory and install frontend dependencies using yarn
+```bash
+cd client
+yarn install
+```
 
-   ```
-   yarn install
-   ```
+#### Backend
+Navigate to the API directory and install backend dependencies:
 
-   Similary navigate to api folder and install backend dependencies
+```bash
+cd ../api
+yarn install
+```
 
-   ```
-   yarn install
-   ```
+### 3. Configure Environment Variables
 
-3. **ENV variables:**
+Create a `.env` file in both the `client` and `api` directories and add the required environment variables.
 
-   - create .env file in the client folder and add these variables
+#### Client `.env` File
+```
+VITE_BASE_URL=http://localhost:4000
+VITE_GOOGLE_CLIENT_ID=your_google_client_id
+```
 
-     #### VITE_BASE_URL= http://localhost:4000
+#### API `.env` File
+```
+PORT=4000
+DB_URL=your_database_url
+JWT_SECRET=your_secret_key
+JWT_EXPIRY=20d
+COOKIE_TIME=7
+SESSION_SECRET=your_session_secret
+CLOUDINARY_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+CLIENT_URL=http://localhost:5173
+```
 
-     #### VITE_GOOGLE_CLIENT_ID= your google client id
+### 4. Run the Project
 
-   - create .env file in the api folder and add these variables
+#### Start Frontend
+Open a terminal, navigate to the client directory, and run:
 
-     #### PORT= 4000
+```bash
+yarn run dev
+```
 
-     #### DB_URL= your db url
+#### Start Backend
+Open another terminal, navigate to the API directory, and run:
 
-     #### JWT_SECRET= your secret (string)
-
-     #### JWT_EXPIRY= 20d
-
-     #### COOKIE_TIME= 7
-
-     #### SESSION_SECRET= your secret session (string)
-
-     #### CLOUDINARY_NAME= your secret session
-
-     #### CLOUDINARY_API_KEY= your cloudinary key
-
-     #### CLOUDINARY_API_SECRET= your cloudinary api secret
-
-     #### CLIENT_URL= http://localhost:5173
-
-4. **Run project:**
-   - Open terminal, navigate to client directory and run below command to start frontend
-   ```
-       yarn run dev
-   ```
-   - Open another terminal, navigate to api directory and run this command to start backend server
-   ```
-       yarn start
-   ```
+```bash
+yarn start
+```
 
 ## Features
 
-- **User Authentication:** Users can sign up, log in, and log out securely. Passwords are hashed for security.
-- **Google Login:** Users can sign up and log in using their gmail.
+- **User Authentication:** Secure signup, login, and logout with password hashing.
+- **Google Authentication:** Users can sign up and log in using Google.
+  
+  ![Authentication](client/public/assets/auth.png)
 
-  ![Airbnb Logo](client/public/assets/auth.png)
+- **Search Listings:** Users can search for available accommodations.
+  
+  ![Search](client/public/assets/search.png)
 
-- **Search Listings:** Users can search for accommodations.
-
-  ![Airbnb Logo](client/public/assets/search.png)
-
-- **View Listings:** Users can view detailed information about each accommodation, including photos, descriptions, amenities.
-
-  ![Airbnb Logo](client/public/assets/view.png)
+- **View Listings:** Users can view detailed property information, including photos, descriptions, and amenities.
+  
+  ![View Listings](client/public/assets/view.png)
 
 - **Make Bookings:** Authenticated users can book accommodations for specific dates.
-
-  ![Airbnb Logo](client/public/assets/book.png)
+  
+  ![Bookings](client/public/assets/book.png)
 
 - **Manage Listings:** Hosts can create, edit, and delete their listings.
+  
+  ![Manage Listings](client/public/assets/manage.png)
 
-  ![Airbnb Logo](client/public/assets/manage.png)
-
-- **Responsive Design:** The application is designed to be responsive and work seamlessly across different devices.
-
-  ![Airbnb Logo](client/public/assets/hero.png)
+- **Responsive Design:** Optimized for different devices.
+  
+  ![Responsive UI](client/public/assets/hero.png)
 
 ## Technologies Used
 
-- **MongoDB:** NoSQL database for storing user data, listings.
-- **Express.js:** Web application framework for building the backend server.
-- **React.js:** JavaScript library for building the user interface.
-- **Node.js:** JavaScript runtime environment for executing server-side code.
-- **Tailwind CSS:** A utility-first CSS framework
-- **Shadcn:** UI library for styling based on Tailwind CSS
-- **JWT:** JSON Web Tokens for secure user authentication.
-- **Cloudinary:** Cloud-based image management for storing and serving images.
-- **Google Cloud:** For gmail based authentication
+- **MongoDB:** NoSQL database for storing user and listing data.
+- **Express.js:** Backend framework for handling server logic.
+- **React.js:** JavaScript library for building the frontend.
+- **Node.js:** Runtime environment for executing JavaScript on the server.
+- **Tailwind CSS:** Utility-first CSS framework for styling.
+- **ShadCN:** UI components built on Tailwind CSS.
+- **JWT:** Secure authentication using JSON Web Tokens.
+- **Cloudinary:** Cloud-based image storage and management.
+- **Google Cloud:** Google authentication for seamless login.
+
+---
+
+This project is developed and maintained by **Surafeal-Dev**. Contributions and suggestions are welcome!
+
