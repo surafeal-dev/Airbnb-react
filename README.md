@@ -83,20 +83,12 @@ yarn start
 
 - **View Listings:** Users can view detailed property information, including photos, descriptions, and amenities.
   
-  ![View Listings](client/public/assets/view.png)
-
 - **Make Bookings:** Authenticated users can book accommodations for specific dates.
   
-  ![Bookings](client/public/assets/book.png)
-
 - **Manage Listings:** Hosts can create, edit, and delete their listings.
-  
-  ![Manage Listings](client/public/assets/manage.png)
 
 - **Responsive Design:** Optimized for different devices.
-  
-  ![Responsive UI](client/public/assets/hero.png)
-
+ 
 ## Technologies Used
 
 - **MongoDB:** NoSQL database for storing user and listing data.
